@@ -1,0 +1,10 @@
+# Use the default image
+image: gitpod/workspace-full
+# Install requirements and start webapp
+tasks:
+  - init: pip install -r requirements.txt
+    command: export FLASK_APP=app.py && python -m flask run
+# Ports to expose on workspace startup (optional)
+ports:
+  - port: 5000
+    onOpen: open-preview
